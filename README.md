@@ -32,27 +32,12 @@ This is an example of real data that has a stronger overlap across all three sam
 
 ## Inputs
 
-In order to run the program, a matlab variable must be used. The variable assumes that each row represents a unique feature and that different columns
-represent different samples with the number of observations for each feature. For example:
-
-Variable = {'name','sample1','sample2';'alpha',10,0;'beta',10,20} : alpha occurs in sample 1 10 times and 0 times in sample 2, etc. 
-
-The matlab variable may either be a matrix or a cell
-
-
-## General Usage
-
-Before trying these functions, please ensure that the folder or all files within matlab-code have been added to the Matlab path
-
-	%load a sample matlab variable 
-	load('sample-data/sample-variables.mat')
-	%plot the overlap in this sample. columns 2,3 and 4 correspond to the number of observations for each unique row (column 1) in each sample
-	PlotOverlap(strong_overlap,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',2,'trpThr',[0.5,1])
-	PlotOverlap(weak_correlation,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',1.5,'trpThr',[0.5,1])
-
 ##### Required fields
 
-1) data - A matlab variable defining observations of each unique feature across multiple samples (see inputs above)
+1) data - A matlab variable (either a matrix or a cell) defining observations of each unique feature across multiple samples 
+The variable assumes that each row represents a unique feature and that different columns
+represent different samples with the number of observations for each feature. For example:
+Data = {'name','sample1','sample2';'alpha',10,0;'beta',10,20} : alpha occurs in sample 1 10 times and 0 times in 		sample 2, etc. 
 
 2) colUse - A vector defining which columns in the 'data' variable (1) contain the observations for each sample you want to compare
 
@@ -75,6 +60,17 @@ The following optional fields will allow you to change how the plot will appear.
 						 then this value needs to be increased. If they are plotted too far from one another and appear very small, then it needs to be decreased.
 {'trpThr':[min,max]} - This will define the minimimum transparency value and maximum transparency value to use while plotting
 {'colors': {[64x1],[64x1],[64x1]} } - This should be a cell of three colormaps. These colormaps will replace the default colormaps used in the program.
+
+
+## General Usage
+
+Before trying these functions, please ensure that the folder or all files within matlab-code have been added to the Matlab path
+
+	%load a sample matlab variable 
+	load('sample-data/sample-variables.mat')
+	%plot the overlap in this sample. columns 2,3 and 4 correspond to the number of observations for each unique row (column 1) in each sample
+	PlotOverlap(strong_overlap,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',2,'trpThr',[0.5,1])
+	PlotOverlap(weak_correlation,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',1.5,'trpThr',[0.5,1])
 
 ## Dependencies
 
