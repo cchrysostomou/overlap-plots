@@ -19,7 +19,7 @@ dark colors in all three samples (subset 7 -> overlap between all three) represe
 higly correlated. 
 
 ## Example of plots 
-[Cartoon of description above!](example-plots/cartoon.png)
+[Cartoon of description above](example-plots/cartoon.png)
 
 ## Inputs
 
