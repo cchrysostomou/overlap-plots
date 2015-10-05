@@ -44,13 +44,19 @@ Before trying these functions, please ensure that the folder or all files within
 ##### Required fields
 
 1) data - A matlab variable defining observations of each unique feature across multiple samples (see inputs above)
+
 2) colUse - A vector defining which columns in the 'data' variable (1) contain the observations for each sample you want to compare
+
 3) contains_header -  An integer 0 or 1 defining whether the 'data' variable (1) contains a header
+
 4) type - An integer 0, 1, or 2 defining the method to use for plotting 
+
 	Type = 1: plot by the ranking of each feature
 	Type = 2: plot by the frqeuency of each feature 
 	Type = 3: plot by the CDF of each feature (that is sum the frequencies of all features before it)
+	
 5) UseLogData - An integer 0 or 1 defining whether to consider the log of frequencies since most samples are highly polarized
+
 6) Names - A 1-D cell defining the names for each sample 
 
 ##### Optional fields
