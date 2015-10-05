@@ -12,7 +12,7 @@ records its occurrence across multiple samples.
 The plot can be visualized as such: Similar to a venn diagram, the program will analyze the overlap between all combinations of samples. 
 So for three samples, it will analyze the features found only in sample 1, or sample 2, or sample 3; the features found between sample 1 and 2, 
 sample 1 and 3, and sample 2 and 3; and finally it will analyze the features found in all samples. For each subset (7 subsets described in this example),
-it will plot a circle. The area of the circle is proportional to the total number of features found in that subset (area of circle = overlap).
+it will plot a circle. The radius of the circle is proportional to the total number of features found in that subset (area of circle = overlap).
 Then, it will plot the correlation of each individual feature in a subset across all samples; this correlation is illustrated by plotting the frequency
 of each feature in a specific sample. Essentiall, for each feature in a subset, a heatmap is plotted within the circle. Features that are plotted with 
 dark colors in all three samples (subset 7 -> overlap between all three) represents features observed at high frequencies in all samples and are probably
@@ -36,9 +36,9 @@ The matlab variable may either be a matrix or a cell
 Before trying these functions, please ensure that the folder or all files within matlab-code have been added to the Matlab path
 
 	%load a sample matlab variable 
-	load('sample-data/strong-overlap.mat')
+	load('sample-data/strong_overlap.mat')
 	%plot the overlap in this sample. columns 2,3 and 4 correspond to the number of observations for each unique row (column 1) in each sample
-	PlotOverlap(strong-overlap,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',2)
+	PlotOverlap(strong-overlap,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',2,'trpThr',[0.5,1])
 
 
 ##### Required fields
