@@ -22,13 +22,12 @@ higly correlated.
 This gives a cartooned example of the description above and how to interpret plots
 [Cartoon of description above](sample-plots/cartoon.png)
 
-This is an example of real data that has weak-correlation in all three samples. The center circle shows that many features are
-found in all three samples. However, when looking at the heatmap in each circle it is evident that sample 2 (green) does not
-show the same number of observations for each feature. Almost all highest ranked observations in sample 2 (green color) are unique to that sample only (Edge node green circle). 
+This is an example of real data that has weak-correlation in sample 'b'. The center circle shows that many features are
+found in all three samples. However, when looking at the heatmap in each circle it is evident that sample b (green) does not
+show the same number of observations for each feature. Almost all highest ranked observations in sample b (green color) are unique to that sample only (Edge node green circle). 
 [weak correlation example](sample-plots/weak-correlation-example.png)
 
-This is an example of real data that has strong overlap in all three samples. In addition, the heatmap of features shared in all 
-samples (center circle) shows that all samples are well correlated
+This is an example of real data that has a stronger overlap across all three samples. In addition, the heatmap of features shared in all samples (center circle) shows that all samples are well correlated
 [strong overlap example](sample-plots/strong-overlap-example.png)
 
 ## Inputs
