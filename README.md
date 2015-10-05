@@ -19,7 +19,17 @@ dark colors in all three samples (subset 7 -> overlap between all three) represe
 higly correlated. 
 
 ## Example of plots 
+This gives a cartooned example of the description above and how to interpret plots
 [Cartoon of description above](sample-plots/cartoon.png)
+
+This is an example of real data that has weak-correlation in all three samples. The center circle shows that many features are
+found in all three samples. However, when looking at the heatmap in each circle it is evident that sample 2 (green) does not
+show the same number of observations for each feature. Almost all highest ranked observations in sample 2 (green color) are unique to that sample only (Edge node green circle). 
+[weak correlation example](sample-plots/weak-correlation-example.png)
+
+This is an example of real data that has strong overlap in all three samples. In addition, the heatmap of features shared in all 
+samples (center circle) shows that all samples are well correlated
+[strong overlap example](sample-plots/strong-overlap-example.png)
 
 ## Inputs
 
@@ -36,10 +46,10 @@ The matlab variable may either be a matrix or a cell
 Before trying these functions, please ensure that the folder or all files within matlab-code have been added to the Matlab path
 
 	%load a sample matlab variable 
-	load('sample-data/strong_overlap.mat')
+	load('sample-data/sample-variables.mat')
 	%plot the overlap in this sample. columns 2,3 and 4 correspond to the number of observations for each unique row (column 1) in each sample
-	PlotOverlap(strong-overlap,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',2,'trpThr',[0.5,1])
-
+	PlotOverlap(strong_overlap,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',2,'trpThr',[0.5,1])
+	PlotOverlap(weak_correlation,[2,3,4], 1, 2, 1, {'a','b','c'},'enlarge',1.5,'trpThr',[0.5,1])
 
 ##### Required fields
 
